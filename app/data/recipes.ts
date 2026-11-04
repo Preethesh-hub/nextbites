@@ -8,8 +8,8 @@ export type Recipe = {
   minutes: number;
   difficulty: "Easy" | "Medium" | "Hard";
   blurb?: string;
-  ingredients?: string[];
-  steps?: string[];
+  ingredients: string[];
+  steps: string[];
 };
 
 export const recipes: Recipe[] = [
