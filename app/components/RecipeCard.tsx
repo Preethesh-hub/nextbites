@@ -1,9 +1,9 @@
-// app/components/RecipeCard.tsx
+import Link from "next/link";
 import type { Recipe } from "../data/recipes";
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
-    <div className="card">
+    <Link href={`/recipe/${recipe.id}`} className="card">
       <div className="card-art" data-cuisine={recipe.cuisine}>
         <span>{recipe.emoji}</span>
       </div>
@@ -16,6 +16,6 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
           <span className="chip chip-cuisine">{recipe.cuisine}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
